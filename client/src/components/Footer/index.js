@@ -4,7 +4,7 @@ import "./style.css";
 function Footer() {
   return (
     <footer className="footer">
-      <span>New York Times @ Copyright 2019</span>
+      <span>Nerd Universe @ Copyright 2019</span>
     </footer>
   );
 }

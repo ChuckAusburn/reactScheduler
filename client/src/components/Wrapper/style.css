@@ -1,4 +1,6 @@
 .wrapper {
+  box-shadow: 1em black;
   min-height: 100%;
   padding-bottom: 100px;
+  background-color: rgb(41, 40, 40);
 }

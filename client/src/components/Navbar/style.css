@@ -1,3 +1,45 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url('/fonts/Roboto-Regular.ttf');
+}
+
 nav.navbar.navbar-default {
   margin-bottom: 0;
+}
+
+.navbar-nav {
+  font-family: "Roboto-Regular";
+}
+
+.bg-dark {
+  background-color: black !important;
+}
+
+/* Hover Animation */
+a:hover {
+ -webkit-animation: color-change 2s ease infinite;
+ -moz-animation: color-change 2s ease infinite;
+ -o-animation: color-change 2s ease infinite;
+ animation: color-change 2s ease infinite;
+}
+
+@-webkit-keyframes color-change {
+  0%{color: white}
+  50%{color:#ff2400}
+  100%{color:white}
+}
+@-moz-keyframes color-change {
+  0%{color: white}
+  50%{color:#ff2400}
+  100%{color:white}
+}
+@-o-keyframes color-change {
+  0%{color: white}
+  50%{color:#ff2400}
+  100%{color:white}
+}
+@keyframes color-change {
+  0%{color: white}
+  50%{color:#ff2400}
+  100%{color:white}
 }

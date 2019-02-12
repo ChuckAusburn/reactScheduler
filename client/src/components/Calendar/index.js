@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-function Article(props) {
+function Calendar(props) {
   return (
     <div className="article text-center" style={{ backgroundImage: `url(${props.backgroundImage})` }}>
       {props.children}
@@ -9,4 +9,4 @@ function Article(props) {
   );
 }
 
-export default Article;
+export default Calendar;

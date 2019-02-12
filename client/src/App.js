@@ -1,11 +1,16 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 import Saved from "./pages/Saved";
 import About from "./pages/About";
 import Search from "./pages/Search";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+
+// FontAwesome Icons
+library.add(faGamepad)
 
 function App() {
   return (

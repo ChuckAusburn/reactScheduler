@@ -18,7 +18,8 @@ handleDeleteButton = (id) => {
 
 render() {
   return (
-    <div className="container" style={{ marginTop: 30 }}>
+    <div className="container">
+      <h1 className="text-center">Saved Events</h1>
       <li className="list-group-item">
         <h4>
           <span>
@@ -26,9 +27,9 @@ render() {
           </span>
           <span className="btn-group pull-right">
             <a href={this.url} target="_blank">
-              <button className="btn btn-default ">View Article</button>
+              <button className="btn btn-primary">View Event</button>
             </a>
-            <button className="btn btn-primary" onClick={() => this.handleDeleteButton(this._id)}>Delete</button>
+            <button className="btn btn-danger" onClick={() => this.handleDeleteButton(this._id)}>Delete</button>
           </span>
         </h4>
           <p>Date Published: {this.date}</p>
