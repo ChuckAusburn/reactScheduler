@@ -85,11 +85,6 @@ array-flatten@1.1.1:
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
   integrity sha1-ml9pkFGx5wczKPKgCJaLZOopVdI=
 
-array-flatten@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-2.1.1.tgz#426bb9da84090c1838d812c8150af20a8331e296"
-  integrity sha1-Qmu52oQJDBg42BLIFQryCoMx4pY=
-
 array-map@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/array-map/-/array-map-0.0.0.tgz#88a2bab73d1cf7bcd5c1b118a003f66f665fa662"
@@ -551,11 +546,6 @@ detect-libc@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
-
-dom@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/dom/-/dom-0.0.3.tgz#16e0c225a0553d8e4362cc4bcd78d8fde59af67b"
-  integrity sha1-FuDCJaBVPY5DYsxLzXjY/eWa9ns=
 
 dot-prop@^4.1.0:
   version "4.2.0"
@@ -2162,19 +2152,6 @@ rimraf@^2.6.1:
   integrity sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==
   dependencies:
     glob "^7.1.3"
-
-router@^1.3.3:
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/router/-/router-1.3.3.tgz#c142f6b5ea4d6b3359022ca95b6580bd217f89cf"
-  integrity sha1-wUL2tepNazNZAiypW2WAvSF/ic8=
-  dependencies:
-    array-flatten "2.1.1"
-    debug "2.6.9"
-    methods "~1.1.2"
-    parseurl "~1.3.2"
-    path-to-regexp "0.1.7"
-    setprototypeof "1.1.0"
-    utils-merge "1.0.1"
 
 rxjs@^6.3.3:
   version "6.4.0"
