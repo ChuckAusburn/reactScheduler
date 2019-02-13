@@ -13,6 +13,7 @@ function About() {
       </Saved>
       <Container style={{ marginTop: 30 }}>
         <Row>
+          <h4>The Basics</h4>
             <ul class="ch-grid">
               <li>
                 <div class="ch-item ch-img-1">

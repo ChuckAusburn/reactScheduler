@@ -29,7 +29,9 @@ render() {
             <a href={this.url} target="_blank">
               <button className="btn btn-primary">View Event</button>
             </a>
+            <a href={this.url} target="_blank">
             <button className="btn btn-danger" onClick={() => this.handleDeleteButton(this._id)}>Delete</button>
+            </a>
           </span>
         </h4>
           <p>Date Published: {this.date}</p>
