@@ -1,17 +1,17 @@
 /* Fonts */
 @font-face {
     font-family: "Roboto-Regular";
-    src: url('/fonts/Roboto-Regular.ttf');
+    src: url('/client/src/fonts/Roboto-Regular.ttf');
 }
 
 @font-face {
     font-family: "Roboto-Light";
-    src: url('/fonts/Roboto-Light.ttf');
+    src: url('/client/src/fonts/Roboto-Light.ttf');
 }
 
 @font-face {
     font-family: "Minecrafter";
-    src: url('/fonts/Minecrafter.ttf');
+    src: url('/client/src/fonts/Minecrafter.ttf');
 }
 
 /* Start of Text */
