@@ -1,11 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import "./index.css";
 import Saved from "../components/Calendar";
 import Row from "../components/Row";
 import Container from "../components/Container";
+import Calendar1 from "../components/calendar1"
 
-function About() {
-  return (
+class About extends Component {
+
+  // state = {
+  //   date: new Date(),
+  // }
+
+  // onChange = date => this.setState({ date })
+
+  render() {
+    return(
     <div>
       <Saved backgroundImage="https://media.giphy.com/media/aqCQhTE5dCHo4/200.gif">
         <h1>Nerd Universe</h1>
@@ -50,9 +59,11 @@ function About() {
               </ul>
         </Row>
         <Row style={{ marginTop: 30 }}></Row>
+        <Calendar1/>
       </Container>
     </div>
   );
+}
 }
 
 export default About;
