@@ -1,22 +1,17 @@
 /* Fonts */
 @font-face {
     font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    src: url('/client/src/fonts/-Regular.ttf');
+    src: url('/client/src/fonts/Roboto');
 }
 
 @font-face {
-    font-family: "Roboto-Light";
-    src: url('/client/src/fonts/Roboto-Light.ttf');
-}
-
-@font-face {
-    font-family: "Minecrafter";
-    src: url('/client/src/fonts/Minecrafter.ttf');
+    font-family: "VT323", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    src: url('/client/src/fonts/VT323');
 }
 
 /* Start of Text */
 h1, h2 {
-    font-family: "Minecrafter"; 
+    font-family: "VT323"; 
     overflow: hidden; 
     white-space: nowrap; 
     margin: 0 auto; 
@@ -30,7 +25,8 @@ h1, h2 {
 
 /* The typing effect */
 h1 {
-    padding-top: 3.2em !important;
+    font-size: 5em !important;
+    padding-top: 2em !important;
     width: 11em;
     -webkit-animation: type 4s steps(40, end);
     animation: type 4s steps(40, end);
@@ -39,6 +35,7 @@ h1 {
 }
 
 h2 { 
+    font-size: 3em !important;
     opacity: 0;
     width: 20em;
     -webkit-animation: type1 4s steps(40, end);

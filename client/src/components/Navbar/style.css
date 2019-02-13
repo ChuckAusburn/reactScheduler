@@ -9,6 +9,7 @@ nav.navbar.navbar-default {
 
 .navbar-nav {
   font-family: "Roboto Mono";
+  font-size: 1em;
 }
 
 .bg-dark {

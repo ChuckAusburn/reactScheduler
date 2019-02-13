@@ -8,6 +8,18 @@ import Search from "./pages/Search";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
+import WebFont from 'webfontloader';
+
+// Google Fonts
+  WebFont.load({
+    google: {
+      families: ['VT323', 'VT323']
+     }});
+
+  WebFont.load({
+   google: {
+     families: ['Roboto Mono', 'Roboto Mono']
+    }});
 
 // FontAwesome Icons
 library.add(faGamepad)
