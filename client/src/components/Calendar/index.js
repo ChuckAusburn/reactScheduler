@@ -11,7 +11,7 @@ class Calendar1 extends Component {
 
   render() {
     return (
-      <div className="article text-center" id="calendar">>
+      <div className="article text-center" id="calendar">
         <Calendar
           onChange={this.onChange}
           value={this.state.date}

@@ -16,6 +16,10 @@ nav.navbar.navbar-default {
   border: none !important;
 }
 
+.nav-link {
+  padding-right: 1em !important;
+}
+
 .bg-dark {
   background-color: black !important;
 }
@@ -26,33 +30,8 @@ nav.navbar.navbar-default {
 
 /* Hover Animation */
 a:hover {
- -webkit-animation: color-change 2s ease infinite;
- -moz-animation: color-change 2s ease infinite;
- -o-animation: color-change 2s ease infinite;
- animation: color-change 2s ease infinite;
+ color: rgb(255, 255, 85) !important; 
 }
-
-@-webkit-keyframes color-change {
-  0%{color: white}
-  50%{color:#ff2400}
-  100%{color:white}
-}
-@-moz-keyframes color-change {
-  0%{color: white}
-  50%{color:#ff2400}
-  100%{color:white}
-}
-@-o-keyframes color-change {
-  0%{color: white}
-  50%{color:#ff2400}
-  100%{color:white}
-}
-@keyframes color-change {
-  0%{color: white}
-  50%{color:#ff2400}
-  100%{color:white}
-}
-
 
 @media screen and (max-width: 960px) {
   .fa {

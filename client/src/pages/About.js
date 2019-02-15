@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./index.css";
+import "./about.css";
 import Saved from "../components/Saved";
 import Row from "../components/Row";
 import Container from "../components/Container";
@@ -29,56 +29,84 @@ class About extends Component {
   render() {
     return(
     <div>
-      <Saved backgroundImage="https://media.giphy.com/media/aqCQhTE5dCHo4/200.gif">
+      <Saved backgroundImage="https://images.pexels.com/photos/1481276/pexels-photo-1481276.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
         <h1>Nerd Universe</h1>
-        <h2>Welcome to Los Angeles</h2>
+        <h5>Welcome to hub, where nerds come together to party in Los Angeles.
+          In the past, the term "nerd" was frowned upon and dismissed
+          by the general public. Now, we've become the majority and are 
+          ready to be loud and proud of our inner geek. Join the party 
+          and come find like-minded individuals like you.
+        </h5>
+        <button className="btn btn-primary" id="learn">Learn More</button>
       </Saved>
       <Container style={{ marginTop: 30 }}>
         <Row>
-          <h4>The Basics</h4>
+          <h4>The Four Principles</h4>
+          <br></br>
             <ul className="ch-grid">
               <li>
                 <div className="ch-item ch-img-1">
-                  <div className="ch-info">
-                    <h3>Search</h3>
-                    <p>Hundreds of exciting events near you</p>
+                  <div className="ch-info-wrap">
+                    <div className="ch-info">
+                      <div className="ch-info-front ch-img-1"></div>
+			            	    <div className="ch-info-back">
+                          <h3>Search</h3>
+                          <p>Hundreds of exciting events near you!</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
               </li>
               <li>
                 <div className="ch-item ch-img-2">
+                <div className="ch-info-wrap">
                   <div className="ch-info">
-                    <h3>Save</h3>
-                    <p>Your favorites to visit in the future</p>
+                    <div className="ch-info-front ch-img-2"></div>
+			                <div className="ch-info-back">
+                        <h3>Save</h3>
+                        <p>Your favorites to check out later!</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </li>
               <li>
                 <div className="ch-item ch-img-3">
-                  <div className="ch-info">
-                    <h3>Send</h3>
-                    <p>Us your thoughts on how we can improve</p>
+                  <div className="ch-info-wrap">
+                      <div className="ch-info">
+                        <div className="ch-info-front ch-img-3"></div>
+			              	    <div className="ch-info-back">
+                            <h3>Submit</h3>
+                            <p>Events of your own, to spread the news!</p>
+                          </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
               </li>
               <li>
-                <div className="ch-item ch-img-4">
+              <div className="ch-item ch-img-4">
+                <div className="ch-info-wrap">
                   <div className="ch-info">
-                    <h3>Survive</h3>
-                    <p>Because being a nerd is a full-time job</p>
+                    <div className="ch-info-front ch-img-4"></div>
+			                <div className="ch-info-back">
+                        <h3>Send</h3>
+                        <p>Us your thoughts on how we can improve!</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </li>
+                </li>
               </ul>
         </Row>
-        <Row style={{ marginTop: 30 }}>
+        <Row>
           <h4>Upcoming Events</h4>
-
           <Calendar/>
-
-          <br/>
+        </Row>
+      </Container>
+      <Row>
           {this.state.events.length ? (
           <List>
+            <h4>New Events</h4>
             {this.state.events.map(event => (
               <ListItem key={event._id}>
               <img src={event.img} alt="Event"/>
@@ -96,8 +124,7 @@ class About extends Component {
         ) : (
           <h3>No Results to Display</h3>
         )}
-        </Row>
-      </Container>
+      </Row>
     </div>
   );
 }
