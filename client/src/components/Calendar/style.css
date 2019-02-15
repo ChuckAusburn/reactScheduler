@@ -23,3 +23,43 @@
   color: black;
   text-decoration: none;
 }
+
+@media screen and (max-width: 960px) {
+  #calendar {
+    margin: auto;
+  }
+  .article {
+    height: 32em !important;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #calendar {
+    margin: auto;
+  }
+  .article {
+    height: 32em !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #calendar {
+    margin: auto;
+  }
+  .article {
+    height: 36em !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #calendar {
+    width: 90%;
+    margin: auto;
+  }
+  .react-calendar__navigation {
+    width: 50%;
+  }
+  .article {
+    height: 51em !important;
+  }
+}
