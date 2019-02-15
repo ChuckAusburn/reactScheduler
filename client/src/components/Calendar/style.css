@@ -1,33 +1,25 @@
-.article {
-  height: 500px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+#calendar {
+  margin-top: 3em;
+  margin-bottom: 10em;
 }
 
-.article::after {
-  content: "";
-  display: block;
-  opacity: .4;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: black;
+.react-calendar {
+  width: 100% !important;
+  height: 125% !important;
 }
 
-.article * {
-  position: relative;
-  z-index: 2;
+.react-calendar button {
+  padding: 2.5em;
 }
 
-.article h1, .article h2 {
-  color: white;
+/* .react-calendar__tile--active {
+} */
+
+.react-calendar__navigation {
+  margin-bottom: 3em !important;
 }
 
-.article h1 {
-  font-size: 60px;
-  padding-top: 140px;
-  margin-top: 0;
+.abbr[data-original-title], abbr[title] {
+  color: black;
+  text-decoration: none;
 }

@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "./index.css";
-import Saved from "../components/Calendar";
+import Saved from "../components/Saved";
 import Row from "../components/Row";
 import Container from "../components/Container";
 import Calendar1 from "../components/calendar1";
 import API from "../utils/API";
 import DeleteBtn from "../components/DeleteBtn";
 import { List, ListItem } from "../components/List";
+import Calendar from "../components/Calendar"
+
 
 class About extends Component {
 
@@ -69,7 +71,8 @@ class About extends Component {
               </li>
               </ul>
         </Row>
-        <Row style={{ marginTop: 30 }}></Row>
+
+        <Row style={{ marginTop: 30 }}>
 
         <Calendar1/>
 
@@ -92,6 +95,13 @@ class About extends Component {
         ) : (
           <h3>No Results to Display</h3>
         )}
+        </Row>
+
+        <Row style={{ marginTop: 30 }}>
+          <h4>Upcoming Events</h4>
+          <Calendar/>
+        </Row>
+
       </Container>
     </div>
   );
