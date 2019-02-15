@@ -1,3 +1,10 @@
+body {
+  overflow-x: hidden;
+  background-color: black;
+  width: 95%;
+  margin: 0 auto !important;
+}
+
 /* Fonts */
 @font-face {
     font-family: "Roboto Mono", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -36,7 +43,7 @@ h4 {
 
 /* The typing effect */
 h1 {
-    font-size: 5em !important;
+    font-size: 5em;
     padding-top: 2em !important;
     width: 11em;
     -webkit-animation: type 4s steps(40, end);
@@ -46,7 +53,7 @@ h1 {
 }
 
 h2 { 
-    font-size: 3em !important;
+    font-size: 3em;
     opacity: 0;
     width: 20em;
     -webkit-animation: type1 4s steps(40, end);
@@ -242,11 +249,23 @@ h2 {
   padding: 1em;
 }
 
+#save {
+  float: right;
+  padding: 1.5em;
+  font-size: .25em;
+
+}
+
 .btn-danger:hover, .btn-primary:hover {
   box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
 }
 
+/* .list-overflow-container {
+  border: none !important;
+} */
+
 .list-group-item {
+  margin-bottom: 3em;
   border: .1em white solid;
   border-radius: 2em !important;
   background-color: black;
@@ -255,5 +274,38 @@ h2 {
 
 p {
   color: white;
+  text-align: justify;
   font-family: "Roboto Mono";
+}
+
+@media screen and (max-width: 960px) {
+  h2 {
+    margin-left: -1em;
+    margin-right: auto !important;
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h2 {
+    margin-left: -1.9em;
+    margin-right: auto !important;
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  h1, h2 {
+    margin: 0 auto !important; 
+  }
+  h1 {
+    width: 8em;
+    font-size: 2.75em !important;
+  }
+  h2 {
+    font-size: 1em !important;
+  }
+  h4 {
+    font-size: 2.5em !important;
+  }
 }

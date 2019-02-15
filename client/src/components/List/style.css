@@ -31,3 +31,36 @@
   .list-overflow-container li:last-child {
     border-bottom: none;
   }
+
+  .list-group-item {
+    background-color: rgb(41, 40, 40);
+  }
+
+  img {
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+
+@media screen and (max-width: 960px) {
+  .list-group {
+    margin: auto;
+    margin-top: 12em;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .list-group {
+    margin: auto;
+    margin-top: 15em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .list-group {
+    width: 90% !important;
+    margin: auto;
+    margin-top: 20em;
+  }
+  img {
+    margin-bottom: 1em;
+  }
+}

@@ -5,7 +5,6 @@ import Row from "../components/Row";
 import Container from "../components/Container";
 import Calendar from "../components/Calendar"
 import { List, ListItem } from "../components/List";
-import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API"
 
 class About extends Component {
@@ -37,34 +36,34 @@ class About extends Component {
       <Container style={{ marginTop: 30 }}>
         <Row>
           <h4>The Basics</h4>
-            <ul class="ch-grid">
+            <ul className="ch-grid">
               <li>
-                <div class="ch-item ch-img-1">
-                  <div class="ch-info">
+                <div className="ch-item ch-img-1">
+                  <div className="ch-info">
                     <h3>Search</h3>
                     <p>Hundreds of exciting events near you</p>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="ch-item ch-img-2">
-                  <div class="ch-info">
+                <div className="ch-item ch-img-2">
+                  <div className="ch-info">
                     <h3>Save</h3>
                     <p>Your favorites to visit in the future</p>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="ch-item ch-img-3">
-                  <div class="ch-info">
+                <div className="ch-item ch-img-3">
+                  <div className="ch-info">
                     <h3>Send</h3>
                     <p>Us your thoughts on how we can improve</p>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="ch-item ch-img-4">
-                  <div class="ch-info">
+                <div className="ch-item ch-img-4">
+                  <div className="ch-info">
                     <h3>Survive</h3>
                     <p>Because being a nerd is a full-time job</p>
                   </div>
@@ -90,7 +89,7 @@ class About extends Component {
               </a>
                 <p>{event.summery}</p>
                 <p>{event.date}</p>
-              <DeleteBtn />
+                <button className="btn btn-primary" id="save">Save Event</button>
             </ListItem>
             ))}
           </List>
