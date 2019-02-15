@@ -3,11 +3,10 @@ import "./index.css";
 import Saved from "../components/Saved";
 import Row from "../components/Row";
 import Container from "../components/Container";
-import Calendar1 from "../components/calendar1";
-import API from "../utils/API";
-import DeleteBtn from "../components/DeleteBtn";
-import { List, ListItem } from "../components/List";
 import Calendar from "../components/Calendar"
+import { List, ListItem } from "../components/List";
+import DeleteBtn from "../components/DeleteBtn";
+import API from "../utils/API"
 
 
 class About extends Component {
@@ -36,34 +35,34 @@ class About extends Component {
       <Container style={{ marginTop: 30 }}>
         <Row>
           <h4>The Basics</h4>
-            <ul className="ch-grid">
+            <ul class="ch-grid">
               <li>
-                <div className="ch-item ch-img-1">
-                  <div className="ch-info">
+                <div class="ch-item ch-img-1">
+                  <div class="ch-info">
                     <h3>Search</h3>
                     <p>Hundreds of exciting events near you</p>
                   </div>
                 </div>
               </li>
               <li>
-                <div className="ch-item ch-img-2">
-                  <div className="ch-info">
+                <div class="ch-item ch-img-2">
+                  <div class="ch-info">
                     <h3>Save</h3>
                     <p>Your favorites to visit in the future</p>
                   </div>
                 </div>
               </li>
               <li>
-                <div className="ch-item ch-img-3">
-                  <div className="ch-info">
+                <div class="ch-item ch-img-3">
+                  <div class="ch-info">
                     <h3>Send</h3>
                     <p>Us your thoughts on how we can improve</p>
                   </div>
                 </div>
               </li>
               <li>
-                <div className="ch-item ch-img-4">
-                  <div className="ch-info">
+                <div class="ch-item ch-img-4">
+                  <div class="ch-info">
                     <h3>Survive</h3>
                     <p>Because being a nerd is a full-time job</p>
                   </div>
@@ -71,11 +70,10 @@ class About extends Component {
               </li>
               </ul>
         </Row>
-
         <Row style={{ marginTop: 30 }}>
-
-        <Calendar1/>
-
+          <h4>Upcoming Events</h4>
+          <Calendar/>
+          <br/>
           {this.state.events.length ? (
           <List>
             {this.state.events.map(event => (
@@ -96,12 +94,6 @@ class About extends Component {
           <h3>No Results to Display</h3>
         )}
         </Row>
-
-        <Row style={{ marginTop: 30 }}>
-          <h4>Upcoming Events</h4>
-          <Calendar/>
-        </Row>
-
       </Container>
     </div>
   );
