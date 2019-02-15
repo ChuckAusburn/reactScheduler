@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./index.css";
-import Saved from "../components/Calendar";
+import Saved from "../components/Saved";
 import Row from "../components/Row";
 import Container from "../components/Container";
-import Calendar1 from "../components/calendar1"
+import Calendar from "../components/Calendar"
 
 class About extends Component {
 
@@ -58,8 +58,10 @@ class About extends Component {
               </li>
               </ul>
         </Row>
-        <Row style={{ marginTop: 30 }}></Row>
-        <Calendar1/>
+        <Row style={{ marginTop: 30 }}>
+          <h4>Upcoming Events</h4>
+          <Calendar/>
+        </Row>
       </Container>
     </div>
   );
