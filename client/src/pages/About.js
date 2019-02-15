@@ -8,12 +8,14 @@ import { List, ListItem } from "../components/List";
 import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API"
 
-
 class About extends Component {
 
   state = {
-    events: []
+    events: [],
   };
+
+  onChange = date => this.setState({ date })  
+
 
   componentDidMount() {
     this.loadEvents();
@@ -72,7 +74,9 @@ class About extends Component {
         </Row>
         <Row style={{ marginTop: 30 }}>
           <h4>Upcoming Events</h4>
+
           <Calendar/>
+
           <br/>
           {this.state.events.length ? (
           <List>
