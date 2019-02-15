@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const eventSchema = new Schema({
   title: { type: String, required: true },
-  img: { type: String, required: true },
+  img: String,
   summery: String,
   date: { type: Date, default: Date.now }
 });

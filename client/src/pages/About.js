@@ -3,16 +3,29 @@ import "./index.css";
 import Saved from "../components/Saved";
 import Row from "../components/Row";
 import Container from "../components/Container";
+import Calendar1 from "../components/calendar1";
+import API from "../utils/API";
+import DeleteBtn from "../components/DeleteBtn";
+import { List, ListItem } from "../components/List";
 import Calendar from "../components/Calendar"
+
 
 class About extends Component {
 
-  // state = {
-  //   date: new Date(),
-  // }
+  state = {
+    events: []
+  };
 
-  // onChange = date => this.setState({ date })
+  componentDidMount() {
+    this.loadEvents();
+  }
 
+  loadEvents = () => {
+    API.getEvents()
+      .then(res => this.setState({ events: res.data }))
+      .then(console.log(this.state.event))
+      .catch(err => console.log(err));
+  };
   render() {
     return(
     <div>
@@ -23,34 +36,34 @@ class About extends Component {
       <Container style={{ marginTop: 30 }}>
         <Row>
           <h4>The Basics</h4>
-            <ul class="ch-grid">
+            <ul className="ch-grid">
               <li>
-                <div class="ch-item ch-img-1">
-                  <div class="ch-info">
+                <div className="ch-item ch-img-1">
+                  <div className="ch-info">
                     <h3>Search</h3>
                     <p>Hundreds of exciting events near you</p>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="ch-item ch-img-2">
-                  <div class="ch-info">
+                <div className="ch-item ch-img-2">
+                  <div className="ch-info">
                     <h3>Save</h3>
                     <p>Your favorites to visit in the future</p>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="ch-item ch-img-3">
-                  <div class="ch-info">
+                <div className="ch-item ch-img-3">
+                  <div className="ch-info">
                     <h3>Send</h3>
                     <p>Us your thoughts on how we can improve</p>
                   </div>
                 </div>
               </li>
               <li>
-                <div class="ch-item ch-img-4">
-                  <div class="ch-info">
+                <div className="ch-item ch-img-4">
+                  <div className="ch-info">
                     <h3>Survive</h3>
                     <p>Because being a nerd is a full-time job</p>
                   </div>
@@ -58,10 +71,37 @@ class About extends Component {
               </li>
               </ul>
         </Row>
+
+        <Row style={{ marginTop: 30 }}>
+
+        <Calendar1/>
+
+          {this.state.events.length ? (
+          <List>
+            {this.state.events.map(event => (
+              <ListItem key={event._id}>
+              <img src={event.img} alt="Event"/>
+              <a href={"/events/" + event._id}>
+                <strong>
+                  {event.title}
+                </strong>
+              </a>
+                <p>{event.summery}</p>
+                <p>{event.date}</p>
+              <DeleteBtn />
+            </ListItem>
+            ))}
+          </List>
+        ) : (
+          <h3>No Results to Display</h3>
+        )}
+        </Row>
+
         <Row style={{ marginTop: 30 }}>
           <h4>Upcoming Events</h4>
           <Calendar/>
         </Row>
+
       </Container>
     </div>
   );

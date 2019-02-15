@@ -1,15 +1,14 @@
 import axios from "axios";
-import apikey from "./apikey";
 
-// Export an object containing methods we'll use for accessing the Article.Ceo API
+// Export an object containing the Events API
 export default {
-  searchArticle: function(query) {
-    return axios.get("https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + query + "&api-key=" + apikey);
+    // Gets all events
+    getEvents: function() {
+      return axios.get("/api/events");
+    },
+      // Gets the event with the given id
+    getEvent: function(id) {
+    return axios.get("/api/events/" + id);
   },
-  // searchArticle: function(articles) {
-  //   return axios.get("https://api.nytimes.com/svc/search/v2/" + startYear + ".json?q=election&api-key=" + apikey);
-  // },
-  // searchArticle: function() {
-  //   return axios.get("https://api.nytimes.com/svc/search/v2/" + endYear + ".json?q=election&api-key=" + apikey);
-  // }
+
 };
