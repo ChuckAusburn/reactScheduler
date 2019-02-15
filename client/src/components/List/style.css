@@ -1,3 +1,16 @@
+.row {
+  width: 100%;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.list-group {
+  background-image: url("https://images.pexels.com/photos/1601775/pexels-photo-1601775.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: repeat-y !important;
+  background-size: 100% 100% !important;
+  background-attachment: fixed !important;
+}
+
 .list-overflow-container {
     max-height: 545px;
     border: 1px #DDDDDD solid;
@@ -33,12 +46,23 @@
   }
 
   .list-group-item {
-    background-color: rgb(41, 40, 40);
+    background-color: black;
+    /* background-image: linear-gradient(rgba(27, 27, 27, 0.884), rgba(27, 27, 27, 0.884)), url("https://images.pexels.com/photos/1601775/pexels-photo-1601775.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
+    background-attachment: fixed !important; */
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+
+  a {
+    text-transform: uppercase;
   }
 
   img {
     margin-right: 1em;
     margin-bottom: 1em;
+    border-radius: 25px;
   }
 
 @media screen and (max-width: 960px) {

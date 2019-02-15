@@ -1,8 +1,9 @@
 body {
   overflow-x: hidden;
-  background-color: black;
-  width: 95%;
-  margin: 0 auto !important;
+}
+
+.row {
+  margin-top: 5em;
 }
 
 /* Fonts */
@@ -17,13 +18,22 @@ body {
 }
 
 /* Start of Text */
-h1, h2 {
+h1 {
     font-family: "VT323"; 
     overflow: hidden; 
     white-space: nowrap; 
-    margin: 0 auto; 
+    font-size: 5em;
+    padding-top: 2em !important;
+    width: 11em;
+    margin-left: -1em !important;
     letter-spacing: .15em;
-    text-shadow: black 0em 0em .5em !important;}
+    text-shadow: black 0em 0em .5em !important;
+      /* Animation */
+      -webkit-animation: type 4s steps(40, end);
+      animation: type 4s steps(40, end);
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+  }
 
 h4 {
   color: white;
@@ -34,34 +44,24 @@ h4 {
   letter-spacing: .15em;
   font-size: 3em !important;
   text-shadow: black 0em 0em .5em !important;
+  border-bottom: .01em solid white;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+h5 {
+  font-size: 1em;
+  color: white;
+  text-align: justify;
+  font-family: "Roboto Mono";
+  margin-top: .5em !important;
+  margin-right: 40em;
+  margin-left: 3.5em;
 }
 
 .text-center {
   color: white;
   margin-bottom: 1.5em;
-}
-
-/* The typing effect */
-h1 {
-    font-size: 5em;
-    padding-top: 2em !important;
-    width: 11em;
-    -webkit-animation: type 4s steps(40, end);
-    animation: type 4s steps(40, end);
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-
-h2 { 
-    font-size: 3em;
-    opacity: 0;
-    width: 20em;
-    -webkit-animation: type1 4s steps(40, end);
-    animation: type1 4s steps(40, end);
-    -webkit-animation-delay: 4s;
-    animation-delay: 4s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
 }
 
 /* The typewriter cursor effect */
@@ -82,43 +82,15 @@ h2 {
       border: none;
     }
 }
-
-@keyframes type1 {
-    0% {
-        width: 0;
-      }
-      1% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 1;
-        border: none;
-      }
-  }
-
-@-webkit-keyframes type1 {
-    0% {
-      width: 0;
-    }
-    110% {
-      border: none;
-    }
-}
-
-@keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-}
 /* End of Text */
 
 /* About Page */
 .ch-grid {
-	padding: 0;
-	list-style: none;
-	display: block;
-	text-align: center;
-	width: 100%;
+  padding: 0;
+  list-style: none;
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 .ch-grid:after,
@@ -132,43 +104,34 @@ h2 {
 }
 
 .ch-grid li {
-	width: 200px;
-	height: 200px;
+	width: 220px;
+	height: 220px;
 	display: inline-block;
-	margin: 20px 25px 0px 25px;
+	margin: 20px;
 }
 
 .ch-item {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	position: relative;
+  position: relative;
   cursor: default;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.ch-info-wrap {
+	position: absolute;
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	perspective: 800px;
+	top: 20px;
+	left: 20px;
+	background: white;
 	box-shadow: 
-		inset 0 0 0 0 rgb(163, 187, 255),
-		inset 0 0 0 16px rgba(255,255,255,0.6),
-		0 1px 2px rgba(0,0,0,0.1);
-	transition: all 0.4s ease-in-out;
-}
-
-.ch-img-1 { 
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Xbox_button_A.svg/1024px-Xbox_button_A.svg.png");
-    background-size: 100%;
-}
-
-.ch-img-2 { 
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Xbox_button_B.svg/2000px-Xbox_button_B.svg.png");
-    background-size: 100%;
-}
-
-.ch-img-3 { 
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Xbox_button_X.svg/2000px-Xbox_button_X.svg.png");
-    background-size: 100%;
-}
-
-.ch-img-4 { 
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Xbox_button_Y.svg/2000px-Xbox_button_Y.svg.png");
-    background-size: 100%;
+		0 0 0 20px rgba(255,255,255,0.2), 
+    inset 0 0 3px rgba(115,114, 23, 0.8);
+  transition: all 0.4s ease-in-out;
 }
 
 .ch-info {
@@ -176,23 +139,54 @@ h2 {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	overflow: hidden;
-	/* opacity: 0; */
 	transition: all 0.4s ease-in-out;
-	transform: scale(0);
+	transform-style: preserve-3d;
+}
+
+.ch-info > div {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-position: center center;
 	backface-visibility: hidden;
+}
+
+.ch-info .ch-info-back {
+	transform: rotate3d(0,1,0,180deg);
+	background: #000;
+}
+
+.ch-img-1 { 
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/921941b8-b0e6-4a14-8f00-7dd21ce7bceb/d565ipt-b9c1b910-3200-481f-a8f0-ebdd397a320a.jpg");
+  background-size: 100%;
+}
+
+.ch-img-2 { 
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/921941b8-b0e6-4a14-8f00-7dd21ce7bceb/d54ekfe-674e564f-815b-484d-9cec-81043d76f58e.jpg");
+  background-size: 100%;
+}
+
+.ch-img-3 { 
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/921941b8-b0e6-4a14-8f00-7dd21ce7bceb/d4wxjt8-326847eb-fff2-4966-a9aa-1990633d767f.jpg");
+  background-size: 100%;
+}
+
+.ch-img-4 { 
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/921941b8-b0e6-4a14-8f00-7dd21ce7bceb/d5wnqm5-405aadbb-d7e2-4b50-88e5-0abdf2cce826.jpg");
+  background-size: 100%;
 }
 
 .ch-info h3 {
 	color: #fff;
 	text-transform: uppercase;
-	position: relative;
 	letter-spacing: 2px;
-	font-size: 22px;
-    margin: 0 30px;
-    margin-bottom: 10px;
-	padding: 65px 0 0 0;
-	height: 110px;
+	font-size: 14px;
+  margin: 0 15px;
+  margin-bottom: -1em;
+	padding: 40px 0 0 0;
+	height: 90px;
 	font-family: 'Open Sans', Arial, sans-serif;
 	text-shadow: 
 		0 0 1px #fff, 
@@ -200,9 +194,9 @@ h2 {
 }
 
 .ch-info p {
-    color: #fff;
-    padding: 10px 5px;
-    text-align: center;
+	color: #fff;
+  padding: 10px 5px;
+  text-align: center;
 	font-style: italic;
 	margin: 0 30px;
 	font-size: 12px;
@@ -215,7 +209,7 @@ h2 {
 	font-style: normal;
 	font-weight: 700;
 	text-transform: uppercase;
-    font-size: 9px;
+	font-size: 9px;
 	letter-spacing: 1px;
 	padding-top: 4px;
 	font-family: 'Open Sans', Arial, sans-serif;
@@ -225,21 +219,16 @@ h2 {
 	color: rgba(255,242,34, 0.8);
 }
 
-.ch-item:hover {
+.ch-item:hover .ch-info-wrap {
 	box-shadow: 
-		inset 0 0 0 110px rgba(63, 146, 255, 0.4),
-		inset 0 0 0 16px rgba(255,255,255,0.8),
-		0 1px 2px rgba(0,0,0,0.1);
+		0 0 0 0 rgba(255,255,255,0.8), 
+		inset 0 0 3px rgba(115,114, 23, 0.8);
 }
 
 .ch-item:hover .ch-info {
-	opacity: 1;
-	transform: scale(1);	
+	transform: rotate3d(0,1,0,-180deg);
 }
-
 /* End of About Page */
-
-/* Saved Page */
 
 /* Buttons */
 .btn-danger, .btn-primary {
@@ -252,8 +241,14 @@ h2 {
 #save {
   float: right;
   padding: 1.5em;
-  font-size: .25em;
+  font-size: .75em;
+}
 
+#learn {
+  float: left;
+  font-size: .75em;
+  margin-top: 1.5em;
+  margin-left: 4.5em;
 }
 
 .btn-danger:hover, .btn-primary:hover {
