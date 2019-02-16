@@ -3,7 +3,7 @@ import "./style.css";
 
 function Calendar(props) {
   return (
-    <div className="article text-center" style={{ backgroundImage: `url(${props.backgroundImage})` }}>
+    <div className="article" style={{ backgroundImage: `url(${props.backgroundImage})` }}>
       {props.children}
     </div>
   );

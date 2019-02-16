@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import "./saved.css";
+import Wrapper2 from "../components/Wrapper2";
 
 class Saved extends Component {
   state = {
@@ -19,8 +20,8 @@ handleDeleteButton = (id) => {
 
 render() {
   return (
-    <div className="container">
-      <h1 className="text-center">Saved Events</h1>
+    <div id="wrapper2">
+      <h1>Saved Events</h1>
       <li className="list-group-item">
         <h4>
           <span>
