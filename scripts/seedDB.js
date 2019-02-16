@@ -13,18 +13,18 @@ const eventSeed = [
     title: "Sample Event",
     img: "https://i.dell.com/sites/imagecontent/metadata/PublishingImages/Services2.jpg",
     summery: "A seeded event for testing, i will now start wrighting nonsense incluthing but not limited to this and those. how about a healthy dose of these?",
-    date: new Date(Date.now())  },
+    date: "Sun Feb 17 2019 00:00:00 GMT-0800 (Pacific Standard Time)"  },
   {
     title: "Sample Event",
     img: "https://i.dell.com/sites/imagecontent/metadata/PublishingImages/Services2.jpg",
     summery: "A seeded event for testing, i will now start wrighting nonsense incluthing but not limited to this and those. how about a healthy dose of these?",
-    date: new Date(Date.now())  
+    date: "Sat Feb 16 2019 00:00:00 GMT-0800 (Pacific Standard Time)"  
   },
   {
     title: "Sample Event",
     img: "https://i.dell.com/sites/imagecontent/metadata/PublishingImages/Services2.jpg",
     summery: "A seeded event for testing, i will now start wrighting nonsense incluthing but not limited to this and those. how about a healthy dose of these?",
-    date: new Date(Date.now())  
+    date: "Mon Feb 18 2019 00:00:00 GMT-0800 (Pacific Standard Time)"  
   },
 ];
 
