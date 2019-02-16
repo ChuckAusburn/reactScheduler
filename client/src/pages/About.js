@@ -11,6 +11,7 @@ class About extends Component {
 
   state = {
     events: [],
+    date: new Date(),
   };
 
   onChange = date => this.setState({ date })  
@@ -100,8 +101,14 @@ class About extends Component {
         </Row>
         <Row>
           <h4>Upcoming Events</h4>
-          <Calendar/>
-        </Row>
+          <div className="article text-center" id="calendar">
+            <Calendar
+              onChange={this.onChange}
+              value={this.state.date}
+              onClick={console.log(this.state.date)}
+            />
+          </div>        
+      </Row>
       </Container>
       <Row>
           {this.state.events.length ? (
