@@ -3,7 +3,7 @@ import "./index.css";
 import Saved from "../components/Saved";
 import Row from "../components/Row";
 import Container from "../components/Container";
-import Calendar from "../components/Calendar"
+import Calendar from 'react-calendar'
 import { List, ListItem } from "../components/List";
 import DeleteBtn from "../components/DeleteBtn";
 import API from "../utils/API"
@@ -12,6 +12,7 @@ class About extends Component {
 
   state = {
     events: [],
+    date: new Date(),
   };
 
   onChange = date => this.setState({ date })  
@@ -75,8 +76,13 @@ class About extends Component {
         <Row style={{ marginTop: 30 }}>
           <h4>Upcoming Events</h4>
 
-          <Calendar/>
-
+          <div className="article text-center" id="calendar">>
+            <Calendar
+              onChange={this.onChange}
+              value={this.state.date}
+              onClick={console.log(this.state.date)}
+            />
+          </div>
           <br/>
           {this.state.events.length ? (
           <List>

@@ -15,7 +15,7 @@ class Calendar1 extends Component {
         <Calendar
           onChange={this.onChange}
           value={this.state.date}
-          onClick={console.log(this.state.date)}
+          onClick={(this.state.date)}
         />
       </div>
     );

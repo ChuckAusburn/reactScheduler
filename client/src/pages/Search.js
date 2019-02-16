@@ -15,16 +15,15 @@ class Search extends Component {
   };
 
 // When the component mounts, get a list of all saved articles and update this.state.saved
-  // componentDidMount() {
-  //   this.searchArticle ("Space");
-  // }
+//   componentDidMount() {
+//     this.searchArticle ("Space");
+//   }
 
-  // searchArticle  = query => {
-  //   API.searchArticle(query)
-  //     .then(res => this.setState({ articles: res.data.response.docs}))
-  //     .then(console.log(this.state.articles))
-  //     .catch(err => console.log(err));
-  // };
+//   searchArticle  = query => {
+//     API.searchArticle(query)
+//       .then(res => this.setState({ articles: res.data.response.docs}))
+//       .then(console.log(this.state.articles))  // .catch(err => console.log(err));
+//   };
 
   handleInputChange = event => {
     const name = event.target.name;

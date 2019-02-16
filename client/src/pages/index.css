@@ -257,3 +257,29 @@ p {
   color: white;
   font-family: "Roboto Mono";
 }
+
+#calendar {
+  margin-top: 3em;
+  margin-bottom: 10em;
+}
+
+.react-calendar {
+  width: 100% !important;
+  height: 125% !important;
+}
+
+.react-calendar button {
+  padding: 2.5em;
+}
+
+/* .react-calendar__tile--active {
+} */
+
+.react-calendar__navigation {
+  margin-bottom: 3em !important;
+}
+
+.abbr[data-original-title], abbr[title] {
+  color: black;
+  text-decoration: none;
+}
