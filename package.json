@@ -30,7 +30,9 @@
     "mongoose": "^5.3.16",
     "rc-calendar": "^9.10.8",
     "react": "^16.8.1",
+    "react-add-to-calendar-hoc": "^1.0.7",
     "react-calendar": "^2.18.1",
+    "react-form": "^3.5.7",
     "react-router-dom": "^4.3.1",
     "simple-react-calendar": "^1.7.0",
     "webfontloader": "^1.6.28"

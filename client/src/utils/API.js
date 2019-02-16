@@ -10,5 +10,9 @@ export default {
     getEvent: function(id) {
     return axios.get("/api/events/" + id);
   },
+      // Saves a new calendar event to the database
+      saveEvent: function (eventData) {
+        return axios.post("/api/events" + eventData);
+      }
 
 };
