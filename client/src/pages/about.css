@@ -25,7 +25,7 @@ h1 {
     font-size: 5em;
     padding-top: 2em !important;
     width: 11em;
-    margin-left: -1em !important;
+    margin-left: 1em !important;
     letter-spacing: .15em;
     text-shadow: black 0em 0em .5em !important;
       /* Animation */
@@ -33,14 +33,15 @@ h1 {
       animation: type 4s steps(40, end);
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
-  }
+}
 
 h4 {
   color: white;
   font-family: "VT323"; 
   white-space: nowrap; 
+  margin-right: auto !important;
+  margin-left: auto !important;
   margin-bottom: 1em !important;
-  margin: 0 auto; 
   letter-spacing: .15em;
   font-size: 3em !important;
   text-shadow: black 0em 0em .5em !important;
@@ -50,18 +51,20 @@ h4 {
 }
 
 h5 {
+  display: inline-block;
   font-size: 1em;
   color: white;
   text-align: justify;
   font-family: "Roboto Mono";
   margin-top: .5em !important;
-  margin-right: 40em;
+  margin-right: 30em;
   margin-left: 3.5em;
 }
 
 .text-center {
   color: white;
   margin-bottom: 1.5em;
+  margin-left: 0em !important;
 }
 
 /* The typewriter cursor effect */
@@ -255,9 +258,10 @@ h5 {
   box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
 }
 
-/* .list-overflow-container {
-  border: none !important;
-} */
+.list-group {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 
 .list-group-item {
   margin-bottom: 3em;
@@ -274,34 +278,41 @@ p {
 }
 
 @media screen and (max-width: 960px) {
-  h2 {
-    margin-left: -1em;
-    margin-right: auto !important;
-    font-size: 3em;
+  h5 {
+    margin-right: 10em !important;
+  }
+  h4 {
+    font-size: 3em !important;
+    padding-left: .5em;
+    padding-right: .5em;
   }
 }
 
 @media screen and (max-width: 640px) {
-  h2 {
-    margin-left: -1.9em;
-    margin-right: auto !important;
-    font-size: 2.5em;
+  h5 {
+    margin-right: 5em !important;
+  }
+  h4 {
+    font-size: 2.3em !important;
+    padding-left: .75em;
+    padding-right: .75em;
   }
 }
 
 @media screen and (max-width: 400px) {
-  h1, h2 {
-    margin: 0 auto !important; 
-  }
   h1 {
     width: 8em;
+    margin-left: 0em auto !important; 
     font-size: 2.75em !important;
   }
-  h2 {
-    font-size: 1em !important;
-  }
   h4 {
-    font-size: 2.5em !important;
+    font-size: 2em !important;
+    padding-left: .25em;
+    padding-right: .25em;
+  }
+  h5 {
+    margin-left:  2.2em;
+    margin-right: 2em !important;
   }
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./about.css";
 import Saved from "../components/Saved";
 import Row from "../components/Row";
+import Wrapper2 from "../components/Wrapper2";
 import Container from "../components/Container";
 import Calendar from 'react-calendar'
 import { List, ListItem } from "../components/List";
@@ -110,8 +111,8 @@ class About extends Component {
           </div>        
       </Row>
       </Container>
-      <Row>
-          {/* {this.state.events.length ?( */}
+      <div id="wrapper2">
+          {this.state.events.length ? (
           <List>
             <h4>New Events</h4>
             {this.state.events.map(event => {
@@ -139,10 +140,10 @@ class About extends Component {
 
           })}
           </List>
-        {/* : (
+        ) : (
           <h3>No Results to Display</h3>
-        )}*/}
-      </Row>
+        )}
+      </div>
     </div>
   );
 }
