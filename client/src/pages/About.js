@@ -3,7 +3,7 @@ import "./about.css";
 import Saved from "../components/Saved";
 import Row from "../components/Row";
 import Container from "../components/Container";
-import Calendar from "../components/Calendar"
+import Calendar from 'react-calendar'
 import { List, ListItem } from "../components/List";
 import API from "../utils/API"
 
