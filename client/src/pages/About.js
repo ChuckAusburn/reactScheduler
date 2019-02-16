@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import "../components/Calendar";
 import "./about.css";
 import Saved from "../components/Saved";
 import Row from "../components/Row";
-import Wrapper2 from "../components/Wrapper2";
 import Container from "../components/Container";
 import Calendar from 'react-calendar'
 import { List, ListItem } from "../components/List";
