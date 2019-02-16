@@ -99,38 +99,49 @@ class About extends Component {
                 </li>
               </ul>
         </Row>
-        <Row>
+        <Row>          
           <h4>Upcoming Events</h4>
           <div className="article text-center" id="calendar">
             <Calendar
               onChange={this.onChange}
               value={this.state.date}
-              onClick={console.log(this.state.date)}
+              onClick= {console.log(this.state.date)}
             />
           </div>        
       </Row>
       </Container>
       <Row>
-          {this.state.events.length ? (
+          {/* {this.state.events.length ?( */}
           <List>
             <h4>New Events</h4>
-            {this.state.events.map(event => (
+            {this.state.events.map(event => {
+            if(this.state.date == event.date)
+              {
+              return(
               <ListItem key={event._id}>
               <img src={event.img} alt="Event"/>
               <a href={"/events/" + event._id}>
                 <strong>
+                  {console.log(event.date)}
                   {event.title}
                 </strong>
               </a>
                 <p>{event.summery}</p>
                 <p>{event.date}</p>
                 <button className="btn btn-primary" id="save">Save Event</button>
-            </ListItem>
-            ))}
+            </ListItem>)
+            }
+            else{
+              return(
+                <p></p>
+              )
+            }
+
+          })}
           </List>
-        ) : (
+        {/* : (
           <h3>No Results to Display</h3>
-        )}
+        )}*/}
       </Row>
     </div>
   );

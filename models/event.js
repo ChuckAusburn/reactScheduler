@@ -5,7 +5,7 @@ const eventSchema = new Schema({
   title: { type: String, required: true },
   img: String,
   summery: String,
-  date: { type: Date, default: Date.now }
+  date: String
 });
 
 const Event = mongoose.model("Event", eventSchema);
