@@ -21,22 +21,26 @@ class Detail extends Component {
   render() {
     return (
       <Container fluid>
+      <br></br>
         <Row>
-          <Col size="md-12">
-            
+          <Col size="md-2">
+            <img src={this.state.event.img} alt="Event"></img>
+          </Col>
+          <Col size="md-10">
               <h1>
                 {this.state.event.title}
               </h1>
           </Col>
         </Row>
+
+
         <Row>
           <Col size="md-10 md-offset-1">
-            <article>
               <h1>Synopsis</h1>
               <p>
                 {this.state.event.summery}
               </p>
-            </article>
+              <p>{this.state.event.date}</p>
           </Col>
         </Row>
         <Row>
@@ -44,6 +48,7 @@ class Detail extends Component {
             <Link to="/">← Back to home</Link>
           </Col>
         </Row>
+        <br></br>
       </Container>
     );
   }
