@@ -2,16 +2,21 @@ body {
   overflow-x: hidden;
 }
 
-/* .wrapper {
+.wrapper {
+  padding: 0em !important;
+}
+
+#wrapper2 {
   background-image: url("https://images.pexels.com/photos/1601775/pexels-photo-1601775.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-repeat: repeat-y !important;
   background-size: 100% 100% !important;
   background-attachment: fixed !important;
-} */
+  height: 100vh; /* Revisit */
+}
 
+/* Header */
 .text-center {
   margin-left: 1em !important;
-  color: white;
   margin-bottom: 1.5em;
 }
 
@@ -28,24 +33,20 @@ body {
 
 /* Start of Text */
 h1 {
-    font-family: "VT323"; 
-    overflow: hidden; 
-    white-space: nowrap; 
-    font-size: 5em;
-    padding-top: 2em !important;
-    width: 11em;
-    letter-spacing: .15em;
-    text-shadow: black 0em 0em .5em !important;
-      /* Animation */
-      -webkit-animation: type 4s steps(40, end);
-      animation: type 4s steps(40, end);
-      -webkit-animation-fill-mode: forwards;
-      animation-fill-mode: forwards;
-  }
-
-.text-center {
   color: white;
-  margin-bottom: 1.5em;
+  font-family: "VT323"; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  font-size: 5em;
+  padding-top: 2em !important;
+  width: 11em;  
+  letter-spacing: .15em;
+  text-shadow: black 0em 0em .5em !important;
+    /* Animation */
+    -webkit-animation: type 4s steps(40, end);
+    animation: type 4s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 /* The typewriter cursor effect */
@@ -101,8 +102,6 @@ p {
 @media screen and (max-width: 400px) {
   h1 {
     margin: 0 auto !important; 
-  }
-  h1 {
     width: 8em;
     font-size: 2.75em !important;
   }

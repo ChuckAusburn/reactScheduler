@@ -1,12 +1,15 @@
 #calendar {
   margin-top: 3em;
   margin-bottom: 10em;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .react-calendar {
-  margin: 0em auto;
   width: 90% !important;
   height: 125% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   background-image: linear-gradient(rgba(255, 255, 255, 0.884), rgba(255, 255, 255, 0.884)), url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/921941b8-b0e6-4a14-8f00-7dd21ce7bceb/d5pk8zc-c8564513-1c53-48be-b619-e00946478a8d.jpg") !important;
   background-repeat: no-repeat !important;
   background-size: 100% 100% !important;
@@ -18,20 +21,17 @@
   background: transparent;
 }
 
-/* .react-calendar__tile--active {
-} */
-
 .react-calendar__navigation {
   margin-bottom: 3em !important;
 }
 
-.react-calendar__navigation button:hover, button:hover {
-  background: rgb(0, 195, 255) !important;
-  opacity: .5;
+.react-calendar__navigation button {
+  min-width: 0.25em !important;
 }
 
-/* .react-calendar__tile--active {
-  color: rgb(168, 0, 84) !important;
+/* .react-calendar__navigation button:hover {
+  background: rgb(0, 195, 255) !important;
+  opacity: .5;
 } */
 
 .abbr[data-original-title], abbr[title] {
@@ -41,40 +41,64 @@
 
 @media screen and (max-width: 960px) {
   #calendar {
-    margin: auto;
-  }
-  .article {
     height: 32em !important;
   }
 }
 
 @media screen and (max-width: 780px) {
   #calendar {
-    margin: auto;
+    height: 20em !important;
+    margin-bottom: 0em;
   }
-  .article {
-    height: 32em !important;
+  .react-calendar__navigation {
+    width: 100%;
+    padding: 1em !important;
+  }
+  .react-calendar button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .react-calendar__navigation button, .react-calendar__tile {
+    min-width: .5em !important;
+    padding: 1em !important;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 640px) {
   #calendar {
-    margin: auto;
+    height: 20em !important;
+    margin-bottom: -4em;
   }
-  .article {
-    height: 36em !important;
+  .react-calendar__navigation {
+    width: 100%;
+    padding: 1em !important;
+  }
+  .react-calendar button {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .react-calendar__navigation button, .react-calendar__tile {
+    min-width: .5em !important;
+    padding: 1em !important;
   }
 }
 
 @media screen and (max-width: 400px) {
   #calendar {
     width: 90%;
-    margin: auto;
+    height: 19em !important;
+    margin-bottom: -8em;
   }
   .react-calendar__navigation {
-    width: 50%;
+    width: 100%;
+    padding: 1em !important;
   }
-  .article {
-    height: 51em !important;
+  .react-calendar__navigation button, .react-calendar__tile {
+    min-width: .5em !important;
+    padding: 1em !important;
+  }
+  .list-group-item {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }

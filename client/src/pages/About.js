@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../components/Calendar";
 import "./about.css";
 import Saved from "../components/Saved";
 import Row from "../components/Row";
@@ -117,8 +118,9 @@ class About extends Component {
           </div>
       </Row>
       </Container>
-      <Row>
-          {this.state.events.length ?(
+
+      <div id="wrapper2">
+          {this.state.events.length ? (
           <List>
             <h4>New Events</h4>
             {this.state.events.map(event => {
@@ -146,10 +148,11 @@ class About extends Component {
 
           })}
           </List>
-        ): (
+
+        ) : (
           <h3>No Results to Display</h3>
         )}
-      </Row>
+      </div>
     </div>
   );
 }
