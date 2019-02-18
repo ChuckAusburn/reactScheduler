@@ -7,14 +7,14 @@ class Saved extends Component {
     topic: "",
     startYear: "",
     endYear: "",
-    articles: [],
+    events: [],
     saved: []
 };
 
 // When delete article button is clicked, remove article from db
 handleDeleteButton = (id) => {
-  API.deleteArticle(id)
-    .then(this.getSavedArticles());
+  API.deleteEvent(id)
+    .then(this.getSavedEvent());
 }
 
 render() {

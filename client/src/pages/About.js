@@ -12,7 +12,15 @@ class About extends Component {
   state = {
     events: [],
     date: new Date(),
+    saved: [],
   };
+
+  click() {
+    var newsave = this.state.saved;
+    this.setState({saved: newsave});
+    // Set it
+    localStorage.setItem('saved', newsave);
+  }
 
   onChange = date => this.setState({ date })  
 
@@ -38,7 +46,7 @@ class About extends Component {
           ready to be loud and proud of our inner geek. Join the party 
           and come find like-minded individuals like you.
         </h5>
-        <button className="btn btn-primary" id="learn">Learn More</button>
+        {/* <button className="btn btn-primary" id="learn">Learn More</button> */}
       </Saved>
       <Container style={{ marginTop: 30 }}>
         <Row>
@@ -105,13 +113,12 @@ class About extends Component {
             <Calendar
               onChange={this.onChange}
               value={this.state.date}
-              onClick= {console.log(this.state.date)}
             />
-          </div>        
+          </div>
       </Row>
       </Container>
       <Row>
-          {/* {this.state.events.length ?( */}
+          {this.state.events.length ?(
           <List>
             <h4>New Events</h4>
             {this.state.events.map(event => {
@@ -128,20 +135,20 @@ class About extends Component {
               </a>
                 <p>{event.summery}</p>
                 <p>{event.date}</p>
-                <button className="btn btn-primary" id="save">Save Event</button>
+                <button className="btn btn-primary" id="save" >Save Event</button>
             </ListItem>)
             }
             else{
               return(
-                <p></p>
+                null
               )
             }
 
           })}
           </List>
-        {/* : (
+        ): (
           <h3>No Results to Display</h3>
-        )}*/}
+        )}
       </Row>
     </div>
   );
