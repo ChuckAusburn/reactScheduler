@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper";
 import WebFont from 'webfontloader';
+import Detail from "./pages/Detail"
 
 // Google Fonts
   WebFont.load({
@@ -34,6 +35,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/saved" component={Saved} />
           <Route exact path="/add" component={Add} />
+          <Route exact path="/events/:id" component={Detail} />
         </Wrapper>
         <Footer />
       </div>

@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import "./index.css";
+// import "./index.css";
 import Saved from "../components/Saved";
 import Row from "../components/Row";
 import Container from "../components/Container";
