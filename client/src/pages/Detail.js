@@ -23,12 +23,12 @@ class Detail extends Component {
     <div>  
       <div id="wrapper2">
         <Container fluid>
-          <Row>
+          <Row id="d-row">
             <div className="header">
               <h1>{this.state.event.title}</h1>
             </div>
           </Row>
-          <Row>
+          <Row id="d-row">
             <Col size="md-3">
               <img src={this.state.event.img} alt="saved-event" id="saved-event"></img>
               <p>{this.state.event.date}</p>
@@ -39,7 +39,7 @@ class Detail extends Component {
               <p>{this.state.event.summery}</p>
             </Col>
           </Row>
-          <Row>
+          <Row id="d-row">
             <Col size="sm-12">
               {/* <Link to="/" id="home">← Back To Home</Link> */}
             </Col>

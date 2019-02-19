@@ -280,6 +280,9 @@ p {
     padding-left: .5em;
     padding-right: .5em;
   }
+  #img-event {
+    margin-left: 6.5em !important;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -290,6 +293,9 @@ p {
     font-size: 2.3em !important;
     padding-left: .75em;
     padding-right: .75em;
+  }
+  #img-event {
+    margin-left: 1.5em !important;
   }
 }
 
@@ -307,5 +313,12 @@ p {
   h5 {
     margin-left:  2.2em;
     margin-right: 2em !important;
+  }
+  .list-group-item {
+    margin-left: 1em !important;
+    margin-right: 1em !important;
+  }
+  #img-event {
+    margin-left: .25em !important;
   }
 }

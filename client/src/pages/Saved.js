@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import Row from "../components/Row"
 import "./saved.css";
 
 class Saved extends Component {
@@ -20,7 +21,11 @@ handleDeleteButton = (id) => {
 render() {
   return (
     <div id="wrapper2">
-      <h1>Saved Events</h1>
+      <Row id="s-row">
+        <div className="header">
+          <h1>Saved Events</h1>
+        </div>
+      </Row>
       <li className="list-group-item">
         <h4>
           <span>
