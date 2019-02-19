@@ -10,9 +10,9 @@ export default {
     getEvent: function(id) {
     return axios.get("/api/events/" + id);
   },
-    // Deletes the book with the given id
-    deleteEvent: function(id) {
-      return axios.delete("/api/events/" + id);
-    },
+      // Saves a new calendar event to the database
+      saveEvent: function (eventData) {
+        return axios.post("/api/events" + eventData);
+      }
 
 };
