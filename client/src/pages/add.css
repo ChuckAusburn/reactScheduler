@@ -1,0 +1,98 @@
+body {
+    overflow-x: hidden;
+  }
+  
+.wrapper {
+  padding: 0em !important;
+}
+
+#wrapper2 {
+  background-image: url("https://images.pexels.com/photos/1601775/pexels-photo-1601775.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: repeat-y !important;
+  background-size: 100% 100% !important;
+  background-attachment: fixed !important;
+  height: 100vh; /* Revisit */
+}
+
+/* Header */
+.text-center {
+  margin-left: 1em !important;
+  margin-bottom: 1.5em;
+}
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+@import url("https://fonts.googleapis.com/css?family=VT323");
+
+/* Start of Text */
+h1 {
+  color: white;
+  font-family: "VT323"; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  font-size: 5em;
+  padding-top: 2em !important;
+  width: 11em;  
+  letter-spacing: .15em;
+  text-shadow: black 0em 0em .5em !important;
+    /* Animation */
+    -webkit-animation: type 4s steps(40, end);
+    animation: type 4s steps(40, end);
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+/* Header */
+.header {
+    text-align: center !important;
+    margin-top: -2em;
+    /* margin-left: 8em; */
+    margin-right: auto;
+    margin-bottom: 3em;
+}
+
+/* The typewriter cursor effect */
+@keyframes type {
+    0% {
+      width: 0;
+    }
+    110% {
+      border: none;
+    }
+  }
+  
+@-webkit-keyframes type {
+    0% {
+      width: 0;
+    }
+    110% {
+      border: none;
+    }
+}
+/* End of Text */
+
+/* Buttons */
+.btn-danger, .btn-primary {
+  font-size: .25em;
+  font-family: "Roboto Mono";
+  margin-left: .5em;
+  padding: 1em;
+}
+
+.btn-danger:hover, .btn-primary:hover {
+  box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
+}
+
+p {
+  color: white;
+  text-align: justify;
+  font-family: "Roboto Mono";
+}
+
+@media screen and (max-width: 400px) {
+  h1 {
+    margin: 0 auto !important; 
+    width: 8em;
+    font-size: 2.75em !important;
+  }
+}
