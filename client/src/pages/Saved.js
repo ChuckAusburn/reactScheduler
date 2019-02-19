@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import "./saved.css";
-import Wrapper2 from "../components/Wrapper2";
 
 class Saved extends Component {
   state = {

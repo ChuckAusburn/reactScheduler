@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Col from "../components/Col"
 import Row from "../components/Row"
 import Container from "../components/Container"
-// import Jumbotron from "../components/Jumbotron";
+import "./detail.css";
 import API from "../utils/API";
 
 class Detail extends Component {
@@ -19,37 +19,34 @@ class Detail extends Component {
   }
 
   render() {
-    return (
-      <Container fluid>
-      <br></br>
-        <Row>
-          <Col size="md-2">
-            <img src={this.state.event.img} alt="Event"></img>
-          </Col>
-          <Col size="md-10">
-              <h1>
-                {this.state.event.title}
-              </h1>
-          </Col>
-        </Row>
-
-
-        <Row>
-          <Col size="md-10 md-offset-1">
-              <h1>Synopsis</h1>
-              <p>
-                {this.state.event.summery}
-              </p>
+    return (  
+    <div>  
+      <div id="wrapper2">
+        <Container fluid>
+          <Row>
+            <div className="header">
+              <h1>{this.state.event.title}</h1>
+            </div>
+          </Row>
+          <Row>
+            <Col size="md-3">
+              <img src={this.state.event.img} alt="saved-event" id="saved-event"></img>
               <p>{this.state.event.date}</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-2">
-            <Link to="/">← Back to home</Link>
-          </Col>
-        </Row>
-        <br></br>
-      </Container>
+              <p>{this.state.event.time}</p>
+              <button className="btn btn-primary" id="home">← Back To Home</button>
+            </Col>
+            <Col size="md-8">
+              <p>{this.state.event.summery}</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col size="sm-12">
+              {/* <Link to="/" id="home">← Back To Home</Link> */}
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </div>
     );
   }
 }
