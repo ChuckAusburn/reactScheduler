@@ -1,6 +1,6 @@
 
 import React, {Component} from "react";
-import "./index.css";
+import "./add.css";
 import Saved from "../components/Saved";
 import Row from "../components/Row";
 import Container from "../components/Container";
@@ -18,8 +18,6 @@ class Add extends Component {
     saved: []
   };
 
- 
-
 handleInputChange = event => {
   const {
     title,
@@ -32,7 +30,6 @@ handleInputChange = event => {
     this.setState({date: event.target.value})
     this.setState({summary: event.target.value})
  }
-  
 };
 
 handleFormSubmit = event => {
@@ -50,9 +47,7 @@ handleFormSubmit = event => {
 }
 
 //render(){
-
 //}
-
 //}
 
 export default Add;
