@@ -128,7 +128,7 @@ class About extends Component {
               {
               return(
               <ListItem key={event._id}>
-              <img src={event.img} alt="Event"/>
+              <img src={event.img} alt="Event" id="img-event"/>
               <a href={"/events/" + event._id}>
                 <strong>
                   {console.log(event.date)}

@@ -14,15 +14,22 @@ body {
   height: 100vh; /* Revisit */
 }
 
-/* Header */
-.text-center {
-  margin-left: 1em !important;
-  margin-bottom: 1.5em;
+#a-row {
+  margin-top: -1em !important;
 }
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://fonts.googleapis.com/css?family=VT323");
+
+/* Header */
+.header {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: -2em;
+  margin-bottom: 3em;
+}
 
 /* Start of Text */
 h1 {
@@ -40,15 +47,6 @@ h1 {
     animation: type 4s steps(40, end);
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-}
-
-/* Header */
-.header {
-    text-align: center !important;
-    margin-top: -2em;
-    /* margin-left: 8em; */
-    margin-right: auto;
-    margin-bottom: 3em;
 }
 
 /* The typewriter cursor effect */

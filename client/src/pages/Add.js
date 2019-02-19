@@ -79,9 +79,11 @@ class Add extends Component {
  render() {
     return(
     <div id="wrapper2">
-      <div className="header">
-        <h1>Add Event</h1>
-      </div>
+      <Row id="a-row">
+        <div className="header">
+          <h1>Add Event</h1>
+        </div>
+      </Row>
     </div>
   );
 }
