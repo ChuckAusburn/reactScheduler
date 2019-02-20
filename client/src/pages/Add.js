@@ -4,6 +4,9 @@ import Row from "../components/Row";
 import API from "../utils/API"
 // import Calendar from 'react-calendar'
 import { Input, TextArea, FormBtn } from "../components/Form";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 
 
 class Add extends Component {
@@ -13,6 +16,14 @@ class Add extends Component {
      date: new Date(),
      summary: "",
    };
+
+   handleChange(date) {
+    this.setState({
+      date: date
+    });
+  }
+  
+
 
    onChanges = date => this.setState({ date })  
  
@@ -31,11 +42,11 @@ class Add extends Component {
       API.saveEvent({
         title: this.state.title,
         img: this.state.img,
-        summery: this.state.summery,
+        summary: this.state.summary,
         date: this.state.date
       })
         .catch(err => console.log(err))
-        .then(console.log(this.state.title, this.state.img, this.state.date, this.state.summery));
+        .then(console.log(this.state.title, this.state.img, this.state.date, this.state.summary));
   };
  
  render() {
@@ -59,17 +70,23 @@ class Add extends Component {
           placeholder="Image URL (link)"
         />
         <TextArea
-          value={this.state.summery}
+          value={this.state.summary}
           onChange={this.handleInputChange}
           name="summary"
           id="textarea-add"
           placeholder="Summary (optional)"
+        />
+        <DatePicker
+        selected={this.state.date}
+        onSelect={this.handleSelect} //when day is clicked
+        onChange={this.onChanges} //only when value has changed
         />
         {/* <Calendar
           onChanges={this.onChange}
           value={this.state.date}
         /> */}
         <FormBtn
+          disabled={!( this.state.title)}
           onClick={this.handleFormSubmit}
         >
           Submit Event
