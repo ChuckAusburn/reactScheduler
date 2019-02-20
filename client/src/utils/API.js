@@ -12,7 +12,7 @@ export default {
     },
     // Saves a new events event to the database
     saveEvent: function (eventData) {
-      return axios.post("/api/events" + eventData);
+      return axios.post("/api/events/", eventData);
     }
 
 };
