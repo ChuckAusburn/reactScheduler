@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "./add.css";
 import Row from "../components/Row";
 import API from "../utils/API"
-import Calendar from 'react-calendar'
+// import Calendar from 'react-calendar'
 import { Input, TextArea, FormBtn } from "../components/Form";
 
 
@@ -56,23 +56,23 @@ class Add extends Component {
           value={this.state.img}
           onChange={this.handleInputChange}
           name="img"
-          placeholder="Image url link"
+          placeholder="Image URL (link)"
         />
         <TextArea
           value={this.state.summery}
           onChange={this.handleInputChange}
-          name="summery"
-          placeholder="Summery (Optional)"
+          name="summary"
+          id="textarea-add"
+          placeholder="Summary (optional)"
         />
-        <Calendar
+        {/* <Calendar
           onChanges={this.onChange}
           value={this.state.date}
-        />
-
+        /> */}
         <FormBtn
           onClick={this.handleFormSubmit}
         >
-          Submit Book
+          Submit Event
         </FormBtn>
       </form>
       </Row>

@@ -69,6 +69,27 @@ h1 {
 }
 /* End of Text */
 
+/* Form */
+input, form {
+  width: 90%;
+  margin-top: -1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-group {
+  padding-top: 1em;
+}
+
+input, #textarea-add {
+  color: white !important;
+  background-color: black !important;
+}
+
+#textarea-add {
+  margin-bottom: 3em;
+}
+
 /* Buttons */
 .btn-danger, .btn-primary {
   font-size: .25em;
@@ -79,6 +100,12 @@ h1 {
 
 .btn-danger:hover, .btn-primary:hover {
   box-shadow: 0 0 10px 0 white inset, 0 0 10px 4px white;
+}
+
+#btn-add-event {
+  font-size: .75em;
+  margin-top: -1em;
+  padding: 1em;
 }
 
 p {
