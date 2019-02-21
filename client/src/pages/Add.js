@@ -52,10 +52,12 @@ class Add extends Component {
  render() {
     return(
     <div id="wrapper2">
-      <Row id="a-row">
+      <Row id="h-row">
         <div className="header">
           <h1>Add Event</h1>
         </div>
+      </Row>
+      <Row id="a-row">
       <form>
         <Input
           value={this.state.title}
@@ -69,17 +71,18 @@ class Add extends Component {
           name="img"
           placeholder="Image URL (link)"
         />
+        <DatePicker
+          id="date-picker"
+          selected={this.state.date}
+          onSelect={this.handleSelect} //when day is clicked
+          onChange={this.onChanges} //only when value has changed
+        />
         <TextArea
           value={this.state.summary}
           onChange={this.handleInputChange}
           name="summary"
           id="textarea-add"
           placeholder="Summary (optional)"
-        />
-        <DatePicker
-        selected={this.state.date}
-        onSelect={this.handleSelect} //when day is clicked
-        onChange={this.onChanges} //only when value has changed
         />
         {/* <Calendar
           onChanges={this.onChange}

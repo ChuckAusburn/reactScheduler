@@ -1,7 +1,11 @@
 body {
     overflow-x: hidden;
-  }
-  
+}
+
+#h-row {
+  margin-top: 0em !important;
+}
+
 .wrapper {
   padding: 0em !important;
 }
@@ -15,7 +19,7 @@ body {
 }
 
 #a-row {
-  margin-top: -1em !important;
+  margin-top: 1em !important;
 }
 
 /* Fonts */
@@ -71,7 +75,7 @@ h1 {
 
 /* Form */
 input, form {
-  width: 90%;
+  width: 70%;
   margin-top: -1em;
   margin-left: auto;
   margin-right: auto;
@@ -90,6 +94,31 @@ input, #textarea-add {
   margin-bottom: 3em;
 }
 
+/* React Calendar */
+#date-picker {
+  width: 100%;
+  padding-left: .75em;
+  border-radius: .25em;
+  border: .08em solid white !important;
+  color: rgb(124, 124, 124) !important;
+}
+.react-datepicker {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.884), rgba(255, 255, 255, 0.884)), url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/921941b8-b0e6-4a14-8f00-7dd21ce7bceb/d5pk8zc-c8564513-1c53-48be-b619-e00946478a8d.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  /* background-attachment: fixed !important; */
+}
+
+.react-datepicker__header {
+  background-color: transparent !important;
+}
+
+.react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range {
+  background-color: #006edc !important;
+}
+
+/* url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/intermediary/f/921941b8-b0e6-4a14-8f00-7dd21ce7bceb/d5pk8zc-c8564513-1c53-48be-b619-e00946478a8d.jpg") !important */
+
 /* Buttons */
 .btn-danger, .btn-primary {
   font-size: .25em;
@@ -106,6 +135,7 @@ input, #textarea-add {
   font-size: .75em;
   margin-top: -1em;
   padding: 1em;
+  opacity: 1;
 }
 
 p {
