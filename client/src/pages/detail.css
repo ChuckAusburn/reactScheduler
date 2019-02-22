@@ -11,18 +11,18 @@ body {
   background-repeat: repeat-y !important;
   background-size: 100% 100% !important;
   background-attachment: fixed !important;
-  height: 100vh; 
+  height: 100%;
 }
 
 #d-row {
-    margin-bottom: -10em !important; /* Needs Better Solution to Remove White Space at Bottom */
     margin-top: -1em !important;
 }
 
 .col-md-3, .col-md-8 {
     background-color: rgb(2, 2, 2, .75);
     height: 25em;
-    margin-top: 8em;
+    /* margin-top: 3em; */
+    margin-bottom: 3em;
     margin-left: auto !important;
     margin-right: auto !important;
 }
@@ -104,21 +104,20 @@ p {
 @media screen and (max-width: 1500) {
   h1 {
     margin: 0 auto !important; 
+    margin-bottom: 1em !important;
     width: 8em;
     font-size: 5em !important;
   }
   img {
     margin-left: .25em !important;
     margin-right: .25em !important;
-  }
-  .col-md-3 {
-    margin-top: 13em;
   }
 }
 
 @media screen and (max-width: 960px) {
   h1 {
     margin: 0 auto !important; 
+    margin-bottom: 1em !important;
     width: 8em;
     font-size: 5em !important;
   }
@@ -126,17 +125,12 @@ p {
     margin-left: .25em !important;
     margin-right: .25em !important;
   }
-  .col-md-3 {
-    margin-top: 13em;
-  }
-  .col-md-8 {
-    margin-top: 13em;
-  }
 }
 
 @media screen and (max-width: 780px) {
   h1 {
     margin: 0 auto !important; 
+    margin-bottom: 1em !important;
     width: 8em;
     font-size: 5em !important;
   }
@@ -144,14 +138,12 @@ p {
     margin-left: 10em !important;
     margin-right: 10em !important;
   }
-  .col-md-3 {
-    margin-top: 15em;
-  }
 }
 
 @media screen and (max-width: 640px) {
   h1 {
     margin: 0 auto !important; 
+    margin-bottom: 2em !important;
     width: 8em;
     font-size: 4em !important;
   }
@@ -159,22 +151,17 @@ p {
     margin-left: 10em !important;
     margin-right: 10em !important;
   }
-  .col-md-3 {
-    margin-top: 15em;
-  }
 }
 
 @media screen and (max-width: 400px) {
   h1 {
     margin: 0 auto !important; 
+    margin-bottom: 2em !important;
     width: 8em;
     font-size: 2.75em !important;
   }
   #saved-event {
-    margin-left: 4em !important;
+    margin-left: 5em !important;
     margin-right: 4em !important;
-  }
-  .col-md-3 {
-    margin-top: 15em;
   }
 }

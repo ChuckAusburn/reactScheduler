@@ -39,11 +39,11 @@ class Detail extends Component {
               <p>{this.state.event.summery}</p>
             </Col>
           </Row>
-          <Row id="d-row">
+          {/* <Row id="d-row">
             <Col size="sm-12">
-              {/* <Link to="/" id="home">← Back To Home</Link> */}
+              <Link to="/" id="home">← Back To Home</Link>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </div>
     </div>
