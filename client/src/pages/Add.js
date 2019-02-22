@@ -14,18 +14,11 @@ class Add extends Component {
      title: "",
      img: "",
      date: new Date(),
-     summary: "",
+     summery: "",
    };
-
-   handleChange(date) {
-    this.setState({
-      date: date
-    });
-  }
   
 
-
-   onChanges = date => this.setState({ date })  
+   onChanges = date => this.setState({ date })
  
   // Handles updating component state when the user types into the input field
   handleInputChange = event => {
@@ -39,14 +32,15 @@ class Add extends Component {
   // Then reload books from the database
   handleFormSubmit = event => {
     event.preventDefault();
+    this.state.date.setHours(0,0,0)
       API.saveEvent({
         title: this.state.title,
         img: this.state.img,
-        summary: this.state.summary,
-        date: this.state.date
+        summery: this.state.summery,
+        date: String(this.state.date)
       })
         .catch(err => console.log(err))
-        .then(console.log(this.state.title, this.state.img, this.state.date, this.state.summary));
+        .then(console.log(this.state.title, this.state.img, this.state.date, this.state.summery));
   };
  
  render() {
@@ -73,16 +67,17 @@ class Add extends Component {
         />
         <DatePicker
           id="date-picker"
+          dateFormat="MMMM d, yyyy"
           selected={this.state.date}
           onSelect={this.handleSelect} //when day is clicked
           onChange={this.onChanges} //only when value has changed
         />
         <TextArea
-          value={this.state.summary}
+          value={this.state.summery}
           onChange={this.handleInputChange}
-          name="summary"
+          name="summery"
           id="textarea-add"
-          placeholder="Summary (optional)"
+          placeholder="Summery (optional)"
         />
         {/* <Calendar
           onChanges={this.onChange}
