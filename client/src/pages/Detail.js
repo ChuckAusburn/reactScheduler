@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Col from "../components/Col"
 import Row from "../components/Row"
 import Container from "../components/Container"
@@ -33,7 +33,7 @@ class Detail extends Component {
               <img src={this.state.event.img} alt="saved-event" id="saved-event"></img>
               <p>{this.state.event.date}</p>
               <p>{this.state.event.time}</p>
-              <button className="btn btn-primary" id="home">← Back To Home</button>
+              <Link to="/" ><button className="btn btn-primary" id="home">← Back To Home</button></Link>
             </Col>
             <Col size="md-8">
               <p>{this.state.event.summery}</p>
