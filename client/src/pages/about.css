@@ -2,6 +2,10 @@ body {
   overflow-x: hidden;
 }
 
+#img-event{
+  max-width: 200px !important;
+}
+
 .row {
   margin-top: 5em;
 }
